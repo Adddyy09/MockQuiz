@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Huawei Cloud & IT Exam Quiz</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="p-4 sm:p-8">
+
+<div id="app" class="quiz-container">
+    <header id="app-header" class="text-center mb-10">
+        <h1 class="text-3xl sm:text-4xl font-extrabold text-gray-800">Huawei Cloud Track Exam Review Quiz</h1>
+        <p class="text-gray-500 mt-2">Questions compiled from Huawei Cloud Track</p>
+    </header>
+
+    <!-- Main Menu -->
+    <div id="main-menu" class="text-center">
+        <h2 class="text-2xl font-bold text-gray-700 mb-6">Choose a Mock Exam</h2>
+        <div class="space-y-4 max-w-md mx-auto">
+            <button class="menu-button" data-quiz="hcia-cloud-it">HCIA PRE-TEST</button>
+            <button class="menu-button" data-quiz="hcia-ai">HCIA AI</button>
+            <button class="menu-button" data-quiz="hcia-cloud-computing">HCIA Cloud Computing</button>
+            <button class="menu-button" data-quiz="hcia-cloud-service">HCIA Cloud Service</button>
+            <button class="menu-button" data-quiz="prelim-cloud">Preliminary Stage Exam</button>
+            <button class="menu-button" data-quiz="national-cloud">National Stage Exam</button>
+            <button class="menu-button" data-quiz="hcip-cloud-service">HCIP Cloud Services</button> 
+            <button class="menu-button" data-quiz="hcip-cloud-computing">HCIP Cloud Computing</button>
+            <button class="menu-button" data-quiz="hcip-ai">HCIP AI</button>
+        </div>
+    </div>
+
+    <!-- Quiz Content -->
+    <div id="quiz-content" class="space-y-6 hidden">
+        <!-- Progress Bar -->
+        <div class="flex flex-wrap justify-center space-x-2 p-3 bg-white rounded-xl shadow-inner mb-6" id="progress-bar">
+            <!-- Progress dots will be inserted here by JavaScript -->
+        </div>
+
+        <!-- Question Card -->
+        <div id="question-card" class="question-card p-6 sm:p-8 rounded-xl">
+            <div id="question-number" class="text-sm font-semibold text-blue-600 mb-2"></div>
+            <h2 id="question-text" class="text-xl sm:text-2xl font-bold text-gray-900 mb-6"></h2>
+            
+            <div id="options-container" class="space-y-3">
+                <!-- Options will be inserted here by JavaScript -->
+            </div>
+
+            <!-- Feedback Area -->
+            <div id="feedback-message" class="mt-4 p-3 rounded-lg hidden"></div>
+        </div>
+    </div>
+
+    <!-- Navigation/Submit Footer -->
+    <footer id="quiz-footer" class="mt-8 flex justify-between items-center hidden">
+        <button id="home-button" class="nav-button bg-gray-500 text-white hover:bg-gray-600">Home</button>
+        <div class="flex-grow text-right">
+            <button id="previous-button" class="nav-button bg-blue-500 text-white hover:bg-blue-600" disabled>Previous</button>
+            <button id="next-button" class="nav-button bg-blue-500 text-white hover:bg-blue-600">Next</button>
+            <button id="submit-quiz-button" class="nav-button text-white hidden">Submit Quiz</button>
+        </div>
+    </footer>
+
+    <!-- Results Screen -->
+    <div id="results-screen" class="question-card p-8 rounded-xl text-center hidden">
+        <h2 class="text-3xl font-extrabold text-gray-800 mb-4">Quiz Complete!</h2>
+        <p id="score-text" class="text-xl font-semibold mb-6"></p>
+        <div id="score-breakdown" class="text-left mx-auto max-w-sm mb-8 space-y-2"></div>
+        <div class="flex justify-center space-x-4">
+            <button id="review-button" class="nav-button bg-blue-500 text-white hover:bg-blue-600">Review Answers</button>
+            <button id="main-menu-button" class="nav-button bg-gray-500 text-white hover:bg-gray-600">Main Menu</button>
+        </div>
+    </div>
+
+</div>
+
+<script src="main.js" type="module"></script>
+</body>
+</html>
