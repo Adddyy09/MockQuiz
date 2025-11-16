@@ -12,6 +12,8 @@ const quizModules = {
     'hcip-cloud-service': './data-hcip-cloud-service.js',
     'hcip-cloud-computing': './data-hcip-cloud-computing.js',
     'hcip-ai': './data-hcip-ai.js',
+    'hcia-cloud-services-reviewer': './data-hcia-cloud-service-reviewer.js',
+    'hcip-big-data': './data-hcia-big-data.js',
 };
 
 async function startQuiz(quizId) {
